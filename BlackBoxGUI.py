@@ -1,3 +1,8 @@
+# Author: Karen Black
+# Date: 8/25/2020
+# Description: Single-player implementation of the logic and strategy game 'Black Box'.
+#               Main file for game play.
+
 import pygame
 from random import sample
 from itertools import product
@@ -10,7 +15,6 @@ class BlackBoxGame:
 
     def __init__(self):
         self._atom_list = sample(list(product(range(1,9), repeat=2)), k=5)  # initialize random list of atom locations
-        print(self._atom_list)
         self._gameB = GameBoard(self._atom_list)        # initialize a game board with the atom list
         self._board = self._gameB.get_board()           # get the game board for calculating ray path
         self._score = 25                                # initialize the starting points for the game
@@ -342,8 +346,7 @@ class BlackBoxGame:
         pygame.display.update()
 
     def draw_marker(self, color, pos):
-        """Accepts a color as a parameter. Draws a circle using built in
-        pygame.draw.circle(screen, color, (x-y coord), radius, thickness)"""
+        """Accepts a color as a parameter. Draws a marker at the indicated position (x-y coordinates)"""
 
         x_coord = pos[1]*60 + 30
         y_coord = pos[0]*60 + 30

@@ -1,3 +1,7 @@
+# Author: Karen Black
+# Date: 8/25/2020
+# Description: Class GameBoard for the game implementation of 'Black Box'
+
 class GameBoard:
     """Implementation of a game board consisting of a 10 x 10 grid to be used in the Black Box game. Contains an init
     method that accepts a list of atoms as a parameter, initializes the board, places the  atoms on the game board.
@@ -29,14 +33,3 @@ class GameBoard:
 
         for row in self._board:
             print(row)
-
-# class Markers:
-#
-#     def __init
-#
-#     def draw_marker(self, color, pos):
-#         """Accepts a color as a parameter. Draws a circle using built in
-#         pygame.draw.circle(screen, color, (x-y coord), radius, thickness)"""
-#         x_coord = pos[1]*60 + 30
-#         y_coord = pos[0]*60 + 30
-#         pygame.draw.circle(self._screen, color, (y_coord, x_coord), 20, 50)
